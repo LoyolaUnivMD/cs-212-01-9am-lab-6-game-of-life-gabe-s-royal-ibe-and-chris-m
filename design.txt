@@ -1,1 +1,24 @@
-
+Method:
+advanceTime(newxposition, newyposition)
+  Set index [newxposition], [newyposition] in the array grid to a slashed box //Set the cell as alive
+  For int i = 0, i < grid.length, i++
+      For int j = 0, j < grid[].length, j++
+        set int count to 0 //Call value to check life count around the cell
+        if (grid[i+1][j] = "/") //Check for cell right
+          count += 1
+        if (grid[i-1][j] = "/") //Check for cell left
+          count +=1
+        if (grid[i][j+1] = "/") //Check for cell above
+          count +=1
+        if (grid[i][j-1] = "/") //Check for cell below
+          count +=1
+        if (grid[i+1][j+1] = "/") //Check for cell diagonal right down
+          count +=1 
+        if (grid[i-1][j-1] = "/") //Check for cell diagonal left up
+          count +=1
+        if (grid[i+1][j-1] = "/") //Check for cell diagonal right up
+          count +=1 
+        if (grid[i-1+[j+1] = "/") //Check for cell diagonal left down
+          count +=1
+        if count not equal to 2 or 3
+          set grid[i][j] to empty box  //Kill the cell if under or overcrowded
