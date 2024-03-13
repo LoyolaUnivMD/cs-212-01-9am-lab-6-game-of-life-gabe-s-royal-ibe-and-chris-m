@@ -1,5 +1,54 @@
 import java.util.Scanner;
 
+class game {
+    int rows;
+    int columns;
+    int[rows][columns] grid;
+
+    public game(int rows, int columns, int grid [rows][columns]){
+        this.rows = rows;
+        this columns = columns;
+        this grid = grid;
+    }
+    public void birthCell(int x position, int y position){
+        grid[xposition][yposition] = "O";
+    }
+    public void advanceTime(){
+        for (int i = 0, i < grid.length, i++){
+            for (int j = 0, j < grid[].length, j++){
+                int count = 0;
+                if (grid[i+1][j].equals("O"){
+                    count += 1;
+                }
+                if (grid[i-1][j.equals("O"){
+                    count += 1;
+                }
+                if (grid[i][j+1].equals("O")
+                    count += 1;
+                if (grid[i][j-1].equals("O"){
+                    count += 1;
+                }
+                if (grid[i+1][j+1].equals("O"){ 
+                    count += 1;
+                }
+                if (grid[i-1][j-1].equals("O"){
+                    count += 1;
+                }
+                if (grid[i+1][j-1].equals("O"){
+                    count += 1; 
+                }
+                if (grid[i-1+[j+1].equals("O"){
+                    count += 1;
+                }
+                if !(count == 2 or count == 3){
+                    grid[i][j] = "X";
+                }
+            }
+        }
+    }
+                
+    
+
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
